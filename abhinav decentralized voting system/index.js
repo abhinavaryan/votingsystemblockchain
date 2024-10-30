@@ -11,7 +11,7 @@ const authorizeUser = (req, res, next) => {
   const token = req.query.Authorization?.split('Bearer ')[1];
 
   if (!token) {
-    return res.status(401).send('<h1 align="center"> Login to Continue </h1>');
+    return res.redirect('/');
   }
   
   try {
